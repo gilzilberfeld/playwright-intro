@@ -1,0 +1,123 @@
+Playwright tutorial
+	Intro
+		History
+		Vs Cypress, Selenium
+		Why it's cooler
+			Timeouts
+			No stale elements
+	Architecture
+		Drivers
+	Installation
+		npm i playwright --save-dev
+		npx playwright init
+		Drivers
+		Config
+			base url  -> should be set
+			run server -> should be set
+		VS Code extension
+	My first test
+		Example: goto + locator + click + validate
+			Page with title, input box and label that updates based on the input. button is disabled in the beginning.
+		Run (headless, no-headless)
+		Skip
+		Debug
+		Exercise
+			-> different input
+			-> Add check that button is disabled in the beginning
+			-> Add check that button is enabled after clicking
+			-> check that after clearing the text box button is disabled
+			Organize the tests
+	Query types
+		find, query,get
+		Example: goto + textbox + button. Clicking, shows an error, typing cleans the error
+		Exercise:
+			Write tests that check the error being there or not.
+	Locators
+		Roles, XPath, selectors, placeholders
+		Example (from 1): goto + locator + click + validate
+			Show in Dev Tools
+			Inspector
+		Exercise
+			3 boxes (including placeholders ) + button
+			Write 1 test in 3/4 different ways
+				Roles, Placeholders, XPath
+	Assertions
+		List
+		Exercise I 
+			Buttons (clear / all ), check boxes,  
+			Buttons operate check boxes, and user can check 
+			Write tests that check things operate correctly.
+		Exercise II 	
+			Buttons (add / remove / clear) + input Text, with options
+			Buttons operate options 
+			Write tests that check things operate correctly.
+	Different Browsers
+		Example: run with another
+	Browser interaction	
+		Navigation (back/forward)
+		Example Navigation
+			Textbox empty
+			Button causing navigation with the text to the next page, check url, then going back checks the textbox is empty
+		Exercise
+			Page1 textbox + button -> Page2 shows text from page 1, textbox , button-> Page3 shows text from both -> back, check that the text is correct -> back check the text text is correct -> forward, text is correct-> forward, title is text
+		Browser context
+		Example	
+			Opening the same page in different context
+			show isolation (different "pages", different texts, different results).
+		Exercise (Chat)
+			Open two pages, one posts info to the second, second posts info, refresh the first one, shows the result
+		Frames
+			Example
+				Page containing frame, get the frame and find the control
+			Exercise
+				Textboxes and buttons send something to the server, need to refresh the frame, and get the result from the text
+	Trace/debug tools
+		Debugging
+			Example (one of former)
+			Pick Locator
+		Trace viewer
+			Record
+			Play
+		page.pause
+		headed mode
+		Screenshots
+			Exercise
+				Create a screenshot
+		Test generation
+			Demo on example
+				Show changes
+			Exercise
+				https://demo.guru99.com/test/newtours/index.php
+				Calculate and add assert sum less than...
+				Bonus: Improve test
+	API tests
+		Example
+			clear db before...
+		Exercise	
+			Add something to db
+			check that it was added
+	Dynamic things
+		Dialogs 
+			Getting rid of errors
+				Example
+		Waiting and timeouts
+	Grouping
+		Before each/all
+		describe
+		POMs
+			Example 
+				Translate (Example Navigation)
+			Exercise
+				From webinar
+
+
+	Summary exercises
+		https://www.saucedemo.com/
+			Login page	
+				Test plan + tests
+			Cont...
+	
+	Authentication
+		browser storage?
+		Example by reseting sotrageState, Avoid authentication
+		
