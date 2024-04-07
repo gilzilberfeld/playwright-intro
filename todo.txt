@@ -1,11 +1,11 @@
 Run everything on all browsers!
 
 Demos
-    d01 -	My first test
+    v d01 -	My first test
 		goto + locator + click + validate
 		Page with title, input box and label that updates based on the input. button is disabled in the beginning.
-    d02 - find / query / get
-        goto + textbox + button. Clicking, shows an error, typing cleans the error 
+    d02 - Dynamic elements
+        goto + 2 textboxes + button. Clicking, shows an error, typing cleans the error 
     d03 - Navigation
             Textbox empty
 			Button causing navigation with the text to the next page, check url, then going back checks the textbox is empty

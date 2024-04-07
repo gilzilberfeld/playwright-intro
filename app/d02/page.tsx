@@ -3,24 +3,34 @@
 import { ChangeEvent, useState } from "react";
 import { Box, Button, TextField } from "@mui/material";
 
+let message: string;
 export default function Demo2() {
   const [errorVisible, setErrorVisible] = useState(false);
-  const [firstName, setFirstName] = useState('')
-  const [lastName, setLastName] = useState('')
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
 
   function handleCheck(event: React.MouseEvent<HTMLButtonElement, MouseEvent>): void {
-    if (firstName.length == 0 || lastName.length == 0){
-      setErrorVisible(true)
+    if (firstName.length == 0) {
+      message = "First name is missing";
+      setErrorVisible(true);
+    }
+    if (lastName.length == 0) {
+      message = "Last name is missing";
+      setErrorVisible(true);
+    }
+    if (firstName.length == 0 && lastName.length == 0) {
+      message = "Both values are missing";
+      setErrorVisible(true);
     }
   }
 
   function handleFirstNameChange(event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void {
-    setFirstName(event.target.value)
+    setFirstName(event.target.value);
     setErrorVisible(false);
   }
-  
+
   function handleLastNameChange(event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void {
-    setLastName(event.target.value)
+    setLastName(event.target.value);
     setErrorVisible(false);
   }
 
@@ -38,7 +48,8 @@ export default function Demo2() {
               Check
             </Button>
           </div>
-          <div className="text-red-500 font-bold text-center m-2">{errorVisible ? "Values are missing" : ""}</div>
+          <div className="text-red-500 font-bold text-center m-2">
+            {errorVisible ? message : ""}</div>
         </div>
       </Box>
       <p className="m-3">In this demo, clicking the button checks that both boxes are not empty.</p>
