@@ -4,9 +4,9 @@ Demos
     v d01 -	My first test
 		goto + locator + click + validate
 		Page with title, input box and label that updates based on the input. button is disabled in the beginning.
-    d02 - Dynamic elements
+    v d02 - Dynamic elements
         goto + 2 textboxes + button. Clicking, shows an error, typing cleans the error 
-    d03 - Navigation
+    v d03 - Navigation
             Textbox empty
 			Button causing navigation with the text to the next page, check url, then going back checks the textbox is empty
     d04 - Browser context
@@ -22,8 +22,8 @@ Demos
     d09 - StorageState - Avoid authentication
 
 exercises
-    e01 - for d01
-    e02 - for d02
+    v  e01 - for d01
+    v  e02 - for d02
     e03 - 3 boxes (including placeholders ) + button
 	e04 - Buttons (clear / all ), check boxes,  
 			Buttons operate check boxes, and user can check 
@@ -39,13 +39,15 @@ exercises
     e13 - Summary (https://www.saucedemo.com/ )
 
 Solutions
-    e01 -	-> different input
-			-> Add check that button is disabled in the beginning
-			-> Add check that button is enabled after clicking
-			-> check that after clearing the text box button is disabled
-			Organize the tests
-    e02 - for d02
-			Write tests that check the error being there or not.
+    v  e01 - for d01
+            1. Try with a different input
+            2. Check that button is disabled in the beginning
+            3. Check that button is enabled after filling the input
+            4. Check that after clearing the text box button is disabled
+			5. Organize the tests
+    v  e02 - for d02
+		    1. Create test plan for all cases and errors
+            2. Write clean tests
     e03 - Write 1 test in 3/4 different ways (	Roles, Placeholders, XPath)
     e04 - Write tests that check things operate correctly.
     e05 - Write tests that check things operate correctly.
