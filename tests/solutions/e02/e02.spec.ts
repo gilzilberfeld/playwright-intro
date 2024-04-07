@@ -1,0 +1,94 @@
+import test, { Locator, expect } from "@playwright/test";
+/*
+Exercises for d02
+1. Create test plan for all cases and errors
+2. Write clean tests
+*/
+let button: Locator;
+let bothErrorText: Locator;
+let firstNameErrorText: Locator;
+let lastNameErrorText: Locator;
+let firstNameBox: Locator;
+let lastNameBox: Locator;
+
+test.beforeEach(async ({ page }) => {
+  await page.goto("/d02");
+  bothErrorText = page.getByText("Both values are missing");
+  firstNameErrorText = page.getByText("First name is missing");
+  lastNameErrorText = page.getByText("Last name is missing");
+  button = page.getByRole("button", { name: "CHECK" });
+  firstNameBox = page.getByRole("textbox", { name: "First name" });
+  lastNameBox = page.getByRole("textbox", { name: "Last name" });
+});
+
+
+test("correct error is displayed when both fields are empty", async ({ page }) => {
+  await button.click();
+  await expect(bothErrorText).toBeVisible();
+  await expect(firstNameErrorText).toBeHidden();
+  await expect(lastNameErrorText).toBeHidden();
+
+});
+
+test("correct error is displayed when only first name is empty", async ({ page }) => {
+  await lastNameBox.fill('a')
+  await button.click();
+  await expect(firstNameErrorText).toBeVisible();
+  await expect(bothErrorText).toBeHidden();
+  await expect(lastNameErrorText).toBeHidden();
+});
+
+test("correct error is displayed when only last name is empty", async ({ page }) => {
+  await firstNameBox.fill('a')
+  await button.click();
+  await expect(lastNameErrorText).toBeVisible();
+  await expect(bothErrorText).toBeHidden();
+  await expect(firstNameErrorText).toBeHidden();
+});
+
+test ("no error is shown if both fields are filled" , async ({page})=>{
+  await firstNameBox.fill('a')
+  await lastNameBox.fill('a')
+  await button.click();
+  await expect(lastNameErrorText).toBeHidden();
+  await expect(firstNameErrorText).toBeHidden();
+  await expect(bothErrorText).toBeHidden();
+})
+
+test("typing anything clears both-empty-error", async ({ page }) => {
+  await button.click();
+  await firstNameBox.fill('a')
+  await expect(bothErrorText).toBeHidden();
+});
+
+
+test("typing anything clears first-empty-error", async ({ page }) => {
+  await lastNameBox.fill('a')
+  await button.click();
+  await firstNameBox.fill('a')
+  await expect(lastNameErrorText).toBeHidden();
+});
+
+test("typing anything clears last-empty-error", async ({ page }) => {
+  await firstNameBox.fill('a')
+  await button.click();
+  await lastNameBox.fill('a')
+  await expect(firstNameErrorText).toBeHidden();
+});
+
+test("typing anything on non-empty field clears empty-error", async ({ page }) => {
+  await firstNameBox.fill('a')
+  await button.click();
+  await firstNameBox.fill('b')
+  await expect(firstNameErrorText).toBeHidden();
+
+  await firstNameBox.clear()
+  await lastNameBox.clear()
+
+  await lastNameBox.fill('a')
+  await button.click();
+  await lastNameBox.fill('b')
+  await expect(lastNameErrorText).toBeHidden();
+
+});
+

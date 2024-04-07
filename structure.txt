@@ -15,23 +15,15 @@ Playwright tutorial
 			base url  -> should be set
 			run server -> should be set
 		VS Code extension
-	My first test
-		Example: goto + locator + click + validate
-			Page with title, input box and label that updates based on the input. button is disabled in the beginning.
+	My first test (d01)
 		Run (headless, no-headless)
 		Skip
 		Debug
-		Exercise
-			-> different input
-			-> Add check that button is disabled in the beginning
-			-> Add check that button is enabled after clicking
-			-> check that after clearing the text box button is disabled
-			Organize the tests
-	Query types
-		find, query,get
-		Example: goto + textbox + button. Clicking, shows an error, typing cleans the error
-		Exercise:
-			Write tests that check the error being there or not.
+		Exercise e01
+	Dynamic elements (d02)
+		get
+		Exercise e02:
+			Make test plan for displaying vs not the errors
 	Locators
 		Roles, XPath, selectors, placeholders
 		Example (from 1): goto + locator + click + validate
