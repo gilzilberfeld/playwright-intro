@@ -26,43 +26,33 @@ export default function App5() {
 
   function handleFirst(event: React.SyntheticEvent<Element, Event>, checked: boolean): void {
     setFirstChecked(checked);
-    if (!secondChecked && checked) {
-      setClearBothDisabled(false);
-      setSelectBothDisabled(false);
-    }
-    if (!secondChecked && !checked){
-      setClearBothDisabled(true)
-      setSelectBothDisabled(false)
-    }
-    if (secondChecked && !checked){
-      setClearBothDisabled(false)
-      setSelectBothDisabled(false)
-    }
-    if (secondChecked && checked){
-      setClearBothDisabled(false)
-      setSelectBothDisabled(true)
-    }
+    setStateForButtons(checked, secondChecked);
   }
 
   function handleSecond(event: React.SyntheticEvent<Element, Event>, checked: boolean): void {
     setSecondChecked(checked);
-    if (!firstChecked && checked) {
+    setStateForButtons(checked, firstChecked);
+  }
+
+  function setStateForButtons(myCheckState: boolean, other: boolean) {
+    if (!other && myCheckState) {
       setClearBothDisabled(false);
       setSelectBothDisabled(false);
     }
-    if (!firstChecked && !checked){
-      setClearBothDisabled(true)
-      setSelectBothDisabled(false)
+    if (!other && !myCheckState) {
+      setClearBothDisabled(true);
+      setSelectBothDisabled(false);
     }
-    if (firstChecked && !checked){
-      setClearBothDisabled(false)
-      setSelectBothDisabled(false)
+    if (other && !myCheckState) {
+      setClearBothDisabled(false);
+      setSelectBothDisabled(false);
     }
-    if (firstChecked && checked){
-      setClearBothDisabled(false)
-      setSelectBothDisabled(true)
+    if (other && myCheckState) {
+      setClearBothDisabled(false);
+      setSelectBothDisabled(true);
     }
   }
+
 
   return (
     <main className="flex min-h-screen flex-col items-center p-10">
