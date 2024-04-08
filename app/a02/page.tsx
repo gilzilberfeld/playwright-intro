@@ -4,7 +4,7 @@ import { ChangeEvent, useState } from "react";
 import { Box, Button, TextField } from "@mui/material";
 
 let message: string;
-export default function Demo2() {
+export default function App2() {
   const [errorVisible, setErrorVisible] = useState(false);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -36,7 +36,7 @@ export default function Demo2() {
 
   return (
     <main className="flex min-h-screen flex-col items-center p-10">
-      <h1 className="p-2">Demo 2 - Dynamic Element</h1>
+      <h1 className="p-2">App 2 - Dynamic Element</h1>
       <Box component="section" className="bg-purple-200" sx={{ p: 2, border: "2px black" }}>
         <div className="flex flex-col">
           <div className="flex flex-row justify-between m-4 px-4">
@@ -52,7 +52,7 @@ export default function Demo2() {
             {errorVisible ? message : ""}</div>
         </div>
       </Box>
-      <p className="m-3">In this demo, clicking the button checks that both boxes are not empty.</p>
+      <p className="m-3">In this app, clicking the button checks that both boxes are not empty.</p>
       <p className="m-3">The test navigates to this page, clicks on the button, checks that the error is displayed.</p>
       <p className="m-3"> The it types to clear the error and checks it disappeared</p>
     </main>

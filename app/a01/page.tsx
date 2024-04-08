@@ -3,7 +3,7 @@
 import { ChangeEvent, useState } from "react";
 import { Box, Button, TextField } from "@mui/material";
 
-export default function Demo1() {
+export default function App1() {
   const [isEnabled, setEnabled] = useState(false);
   const [theInput, setInput] = useState("");
   const [theResult, setResult] = useState("Waiting...")
@@ -25,7 +25,7 @@ export default function Demo1() {
 
   return (
     <main className="flex min-h-screen flex-col items-center p-10">
-      <h1 className="p-2">Demo 1 - Simple Test</h1>
+      <h1 className="p-2">App 1 - Simple Test</h1>
       <Box component="section" className="bg-purple-200" sx={{ p: 2, border: "2px black" }}>
         <div className="flex flex-col">
           <div className="flex flex-row justify-between m-2 p-2">
@@ -48,7 +48,7 @@ export default function Demo1() {
           </div>
         </div>
       </Box>
-      <p className="m-3">In this demo, clicking the button reverses the input string.</p>
+      <p className="m-3">In this app, clicking the button reverses the input string.</p>
       <p className="m-3">The test navigates to this page, fills the data in the input box (which enables the button), and validates the result.</p>
     </main>
   );
