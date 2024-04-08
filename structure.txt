@@ -29,13 +29,13 @@ Playwright tutorial
 		Example (from 1): goto + locator + click + validate
 			Show in Dev Tools
 			Inspector
-		Exercise
+		Exercise (e03)
 			3 boxes (including placeholders ) + button
-			Write 1 test in 3/4 different ways
+			Write 1 test in 3 different ways
 				Roles, Placeholders, XPath
 	Assertions
 		List
-		Exercise I 
+->		Exercise I 
 			Buttons (clear / all ), check boxes,  
 			Buttons operate check boxes, and user can check 
 			Write tests that check things operate correctly.
