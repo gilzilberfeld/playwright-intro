@@ -9,7 +9,7 @@ export default function Demo3() {
   const router = useRouter()
 
   function handleReverse(event: React.MouseEvent<HTMLButtonElement, MouseEvent>): void {
-    router.push('/d03/reverse?input=' + theInput)
+    router.push('/a03/reverse?input=' + theInput)
   }
 
   function handleInputChange(event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void {

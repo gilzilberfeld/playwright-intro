@@ -4,7 +4,7 @@ let inputBox : Locator
 let resultBox : Locator
 
 test.beforeEach(async ({page}) => {
-  await page.goto('/d01');
+  await page.goto('/a01');
   inputBox = page.getByRole("textbox", {name : "Input"})
   resultBox = page.getByRole("textbox", {name : "Result"})
 })

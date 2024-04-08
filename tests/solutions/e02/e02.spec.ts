@@ -1,6 +1,6 @@
 import test, { Locator, expect } from "@playwright/test";
 /*
-Exercises for d02
+Exercises for a02
 1. Create test plan for all cases and errors
 2. Write clean tests
 */
@@ -12,7 +12,7 @@ let firstNameBox: Locator;
 let lastNameBox: Locator;
 
 test.beforeEach(async ({ page }) => {
-  await page.goto("/d02");
+  await page.goto("/a02");
   bothErrorText = page.getByText("Both values are missing");
   firstNameErrorText = page.getByText("First name is missing");
   lastNameErrorText = page.getByText("Last name is missing");

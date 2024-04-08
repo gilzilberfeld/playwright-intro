@@ -1,5 +1,5 @@
 /*
-Exercises for d01
+Exercises for a01
 1. Try with a different input
 2. Check that button is disabled in the beginning
 3. Check that button is enabled after filling the input

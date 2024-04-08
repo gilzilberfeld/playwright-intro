@@ -2,7 +2,7 @@ import test, { expect } from "@playwright/test";
 
 test('reversal of input', async ({ page }) => {
     // Navigate to relative URL (from baseurl in config)
-    await page.goto('/d01');
+    await page.goto('/a01');
   
     // Find the input
     const inputBox = page.getByRole("textbox", {name : "Input"})
