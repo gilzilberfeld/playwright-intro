@@ -35,11 +35,10 @@ Playwright tutorial
 				Roles, Placeholders, XPath
 	Assertions
 		List
-->		Exercise I 
-			Buttons (clear / all ), check boxes,  
-			Buttons operate check boxes, and user can check 
-			Write tests that check things operate correctly.
-		Exercise II 	
+		Exercise (e04)
+			Buttons and checkboxes
+			Write tests that check buttons behave correctly.
+->		Exercise II 	
 			Buttons (add / remove / clear) + input Text, with options
 			Buttons operate options 
 			Write tests that check things operate correctly.
@@ -62,7 +61,7 @@ Playwright tutorial
 			Example
 				Page containing frame, get the frame and find the control
 			Exercise
-				Textboxes and buttons send something to the server, need to refresh the frame, and get the result from the text
+				Text boxes and buttons send something to the server, need to refresh the frame, and get the result from the text
 	Trace/debug tools
 		Debugging
 			Example (one of former)
@@ -111,5 +110,5 @@ Playwright tutorial
 	
 	Authentication
 		browser storage?
-		Example by reseting sotrageState, Avoid authentication
+		Example by resetting storageState, Avoid authentication
 		

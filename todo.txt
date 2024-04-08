@@ -25,8 +25,7 @@ exercises
     v  e01 - for a01
     v  e02 - for a02
     v  e03 - for a04 
-	e04 - Buttons (clear / all ), check boxes,  
-			Buttons operate check boxes, and user can check 
+	v  e04 - for a05
     e05 - Buttons (add / remove / clear) + input Text, with options
 			Buttons operate options      
     e06 - Page1 textbox + button -> Page2 shows text from page 1, textbox , button-> Page3 shows text from both -> back, 
@@ -48,8 +47,12 @@ Solutions
     v  e02 - for d02
 		    1. Create test plan for all cases and errors
             2. Write clean tests
-    v e03 - Write 1 test in 3 different ways (	Roles, Placeholders, XPath)
-    e04 - Write tests that check things operate correctly.
+    v e03 - 1. On startup all boxes are empty (using getByRoll().all())
+            2. When typing in the second box, the value appears in the other two (using getByPlaceHolder)
+            3. After clearing the boxes are empty (using XPath)
+    v e04 - 1. Write a test plan
+            2. Write the tests that the behavior of buttons and checkbox is as expected
+Write tests that check things operate correctly.
     e05 - Write tests that check things operate correctly.
     e06 - check that the text is correct -> back check the text text is correct -> forward, text is correct-> forward, title is text
     e07 - <define tests>

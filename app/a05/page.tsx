@@ -75,7 +75,7 @@ export default function App5() {
           </div>
         </div>
       </Box>
-      <p className="m-3">In this app, you can select either checkbox alone, or use the buttons to check or clear both.</p>
+      <p className="m-3">In this app, you can select either checkbox, or use the buttons to check or clear both. The state of the checkboxes affects the state of the buttons.</p>
     </main>
   );
 }
