@@ -5,7 +5,7 @@ Demos
 		goto + locator + click + validate
 		Page with title, input box and label that updates based on the input. button is disabled in the beginning.
     v d02 - Dynamic elements
-        goto + 2 textboxes + button. Clicking, shows an error, typing cleans the error 
+        goto + 2 text boxes + button. Clicking, shows an error, typing cleans the error 
     v d03 - Navigation
             Textbox empty
 			Button causing navigation with the text to the next page, check url, then going back checks the textbox is empty
@@ -22,9 +22,9 @@ Demos
     d09 - StorageState - Avoid authentication
 
 exercises
-    v  e01 - for d01
-    v  e02 - for d02
-    e03 - 3 boxes (including placeholders ) + button
+    v  e01 - for a01
+    v  e02 - for a02
+    v  e03 - for a04 
 	e04 - Buttons (clear / all ), check boxes,  
 			Buttons operate check boxes, and user can check 
     e05 - Buttons (add / remove / clear) + input Text, with options
@@ -48,7 +48,7 @@ Solutions
     v  e02 - for d02
 		    1. Create test plan for all cases and errors
             2. Write clean tests
-    e03 - Write 1 test in 3/4 different ways (	Roles, Placeholders, XPath)
+    v e03 - Write 1 test in 3 different ways (	Roles, Placeholders, XPath)
     e04 - Write tests that check things operate correctly.
     e05 - Write tests that check things operate correctly.
     e06 - check that the text is correct -> back check the text text is correct -> forward, text is correct-> forward, title is text
