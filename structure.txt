@@ -38,11 +38,15 @@ Playwright tutorial
 		Exercise (e04)
 			Buttons and checkboxes
 			Write tests that check buttons behave correctly.
-->		Exercise II 	
-			Buttons (add / remove / clear) + input Text, with options
-			Buttons operate options 
-			Write tests that check things operate correctly.
-	Different Browsers
+	CodeGen
+		Show on d01(?)
+		Exercise (e05) 	
+			Dropdown
+			Write a test plan & tests
+			Use codegen & manual. 
+
+
+->	Different Browsers
 		Example: run with another
 	Browser interaction	
 		Navigation (back/forward)
