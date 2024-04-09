@@ -46,13 +46,11 @@ Playwright tutorial
 			Use codegen & manual. 
 
 
-->	Different Browsers
+	Different Browsers
 		Example: run with another
 	Browser interaction	
 		Navigation (back/forward)
-		Example Navigation
-			Textbox empty
-			Button causing navigation with the text to the next page, check url, then going back checks the textbox is empty
+->		Example Navigation (a03, d04)
 		Exercise
 			Page1 textbox + button -> Page2 shows text from page 1, textbox , button-> Page3 shows text from both -> back, check that the text is correct -> back check the text text is correct -> forward, text is correct-> forward, title is text
 		Browser context

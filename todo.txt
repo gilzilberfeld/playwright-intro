@@ -9,6 +9,7 @@ Demos
     v d03 - Navigation
             Textbox empty
 			Button causing navigation with the text to the next page, check url, then going back checks the textbox is empty
+    v d04 - Browser Navigation (a03)
     d04 - Browser context
             Opening the same page in different context
 			show isolation (different "pages", different texts, different results).    
