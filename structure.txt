@@ -53,9 +53,8 @@ Playwright tutorial
 			Page1 textbox + button -> Page2 shows text from page 1, textbox , button-> Page3 shows text from both -> back, check that the text is correct -> back check the text text is correct -> forward, text is correct-> forward, title is text
 		Browser context
 		Example	
-->			Opening the same page in different context
-			show isolation (different "pages", different texts, different results).
-		Exercise (Chat)
+			different browsers / same browser
+->		Exercise (Chat)
 			Open two pages, one posts info to the second, second posts info, refresh the first one, shows the result
 		Frames
 			Example

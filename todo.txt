@@ -10,17 +10,16 @@ Demos
             Textbox empty
 			Button causing navigation with the text to the next page, check url, then going back checks the textbox is empty
     v d04 - Browser Navigation (a03)
-    d04 - Browser context
-            Opening the same page in different context
-			show isolation (different "pages", different texts, different results).    
-    d05 - Frames
+    v  d05 - Browser context
+            Opening the same page in different browsers / same browser
+    d06 - Frames
             Page containing frame, get the frame and find the control
-    d06 - API
+    d07 - API
             clear db before... 
-    d07 - Getting rid of Error Dialogs, blocking element, increasing timeout
-    d08 - POMs
+    d08 - Getting rid of Error Dialogs, blocking element, increasing timeout
+    d09 - POMs
              Transform string  (Example Navigation)
-    d09 - StorageState - Avoid authentication
+    d10 - StorageState - Avoid authentication
 
 exercises
     v  e01 - for a01
@@ -55,11 +54,12 @@ Solutions
     v e05 - 1. Write a test plan
             2. Write the tests that check the display based on selection
 
-    v e06 - for e07
+    v e06 - for a07
          	1. Write a test that checks that the URLs contain the right information
             2. Write a test that goes to page 3, then goes back twice. 
                  Check that the URL and texts are displayed correctly and the input boxes are empty.
-->    e08 - <define tests>
+->    e07-  Open two pages, one posts info to the second, second posts info, refresh the first one, shows the result   
+    e08 - <define tests>
     e09 - <define> Screenshot test
     e10 - Calculate and add assert sum less than... Bonus: Improve test
 	e11 - Add something to db, check that it was added			
