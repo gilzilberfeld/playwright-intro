@@ -28,7 +28,7 @@ exercises
     v  e03 - for a04 
 	v  e04 - for a05
     v  e05 - for a06
-    e06 - Page1 textbox + button -> Page2 shows text from page 1, textbox , button-> Page3 shows text from both -> back, 
+    v  e06 - Page1 textbox + button -> Page2 shows text from page 1, textbox , button-> Page3 shows text from both -> back, 
     e07-  Open two pages, one posts info to the second, second posts info, refresh the first one, shows the result   
     e08 - Text boxes and buttons send something to the server, need to refresh the frame, and get the result from the text   
     e09 - for <d01?>
@@ -55,9 +55,11 @@ Solutions
     v e05 - 1. Write a test plan
             2. Write the tests that check the display based on selection
 
-->  e06 - check that the text is correct -> back check the text text is correct -> forward, text is correct-> forward, title is text
-    e07 - <define tests>
-    e08 - <define tests>
+    v e06 - for e07
+         	1. Write a test that checks that the URLs contain the right information
+            2. Write a test that goes to page 3, then goes back twice. 
+                 Check that the URL and texts are displayed correctly and the input boxes are empty.
+->    e08 - <define tests>
     e09 - <define> Screenshot test
     e10 - Calculate and add assert sum less than... Bonus: Improve test
 	e11 - Add something to db, check that it was added			

@@ -44,18 +44,16 @@ Playwright tutorial
 			Dropdown
 			Write a test plan & tests
 			Use codegen & manual. 
-
-
 	Different Browsers
 		Example: run with another
 	Browser interaction	
 		Navigation (back/forward)
-->		Example Navigation (a03, d04)
-		Exercise
+		Example Navigation (a03, d04) 
+		Exercise 
 			Page1 textbox + button -> Page2 shows text from page 1, textbox , button-> Page3 shows text from both -> back, check that the text is correct -> back check the text text is correct -> forward, text is correct-> forward, title is text
 		Browser context
 		Example	
-			Opening the same page in different context
+->			Opening the same page in different context
 			show isolation (different "pages", different texts, different results).
 		Exercise (Chat)
 			Open two pages, one posts info to the second, second posts info, refresh the first one, shows the result
