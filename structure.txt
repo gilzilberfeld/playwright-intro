@@ -59,10 +59,9 @@ Playwright tutorial
 		Frames
 			Example
 				Page containing frame, get the frame and find the control
-			Exercise
-->				Text boxes and buttons send something to the server, need to refresh the frame, and get the result from the text
+			Exercise: Make sure that in the frame appears the right image and not the other images
 	Trace/debug tools
-		Debugging
+->		Debugging
 			Example (one of former)
 			Pick Locator
 		Trace viewer
