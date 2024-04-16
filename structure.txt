@@ -54,13 +54,13 @@ Playwright tutorial
 		Browser context
 		Example	
 			different browsers / same browser
-->		Exercise (Chat)
-			Open two pages, one posts info to the second, second posts info, refresh the first one, shows the result
+		Exercise (Chat)
+--			Open two pages, one posts info to the second, second posts info, refresh the first one, shows the result
 		Frames
 			Example
 				Page containing frame, get the frame and find the control
 			Exercise
-				Text boxes and buttons send something to the server, need to refresh the frame, and get the result from the text
+->				Text boxes and buttons send something to the server, need to refresh the frame, and get the result from the text
 	Trace/debug tools
 		Debugging
 			Example (one of former)

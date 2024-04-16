@@ -10,10 +10,8 @@ Demos
             Textbox empty
 			Button causing navigation with the text to the next page, check url, then going back checks the textbox is empty
     v d04 - Browser Navigation (a03)
-    v  d05 - Browser context
-            Opening the same page in different browsers / same browser
-    d06 - Frames
-            Page containing frame, get the frame and find the control
+    v d05 - Browser context
+    v d06 - Frames
     d07 - API
             clear db before... 
     d08 - Getting rid of Error Dialogs, blocking element, increasing timeout
