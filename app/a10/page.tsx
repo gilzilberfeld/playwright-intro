@@ -30,7 +30,7 @@ export default function App10() {
         </div>
       </Box>
 
-      <iframe src={theSrc} width="400" height="600" title="The Frame" />
+      <iframe src={theSrc} width="400" height="600" title="The-Frame" />
     </main>
   );
 }

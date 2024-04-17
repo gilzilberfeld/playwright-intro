@@ -61,7 +61,7 @@ Playwright tutorial
 				Page containing frame, get the frame and find the control
 			Exercise: Make sure that in the frame appears the right image and not the other images
 	Trace/debug tools
-->		Debugging
+		Debugging
 			Example (one of former)
 			Pick Locator
 		Trace viewer
@@ -72,19 +72,17 @@ Playwright tutorial
 		Screenshots
 			Exercise
 				Create a screenshot
-		Test generation
-			Demo on example
-				Show changes
-			Exercise
-				https://demo.guru99.com/test/newtours/index.php
-				Calculate and add assert sum less than...
-				Bonus: Improve test
 	API tests
 		Example
 			clear db before...
 		Exercise	
 			Add something to db
 			check that it was added
+	code gen 
+		Exercise
+				https://demo.guru99.com/test/newtours/index.php
+				Calculate and add assert sum less than...
+				Bonus: Improve test
 	Dynamic things
 		Dialogs 
 			Getting rid of errors

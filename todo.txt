@@ -28,8 +28,8 @@ exercises
     v  e06 - Page1 textbox + button -> Page2 shows text from page 1, textbox , button-> Page3 shows text from both -> back, 
 --  e07-  Open two pages, one posts info to the second, second posts info, refresh the first one, shows the result   
     v e08 - Make sure that in the frame appears the right image and not the other images
-->  e09 - for <d01?>
-    e10 - for <https://demo.guru99.com/test/newtours/index.php>
+    v e09 - write three test that create a screenshot including each frame content. clean up the files afterwards
+->    e10 - for <https://demo.guru99.com/test/newtours/index.php>
     e11 - API
     e12 - POM (From webinar)
     e13 - Summary (https://www.saucedemo.com/ )
@@ -58,8 +58,10 @@ Solutions
                  Check that the URL and texts are displayed correctly and the input boxes are empty.
 --  e07-  Open two pages, one posts info to the second, second posts info, refresh the first one, shows the result   
     v e08 - Make sure that in the frame appears the right image and not the other images
-->  e09 - <define> Screenshot test
-    e10 - Calculate and add assert sum less than... Bonus: Improve test
+    v e09 - for a10
+            write three test that create a screenshot including each frame content
+            clean up the files afterwards
+->  e10 - Calculate and add assert sum less than... Bonus: Improve test
 	e11 - Add something to db, check that it was added			
 	e12 - <define test from webinar>
     e13 - Login page (Test plan + tests), Cont...
