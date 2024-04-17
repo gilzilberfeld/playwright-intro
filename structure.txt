@@ -75,7 +75,7 @@ Playwright tutorial
 	API tests
 		Example
 			clear db before...
-		Exercise	
+->		Exercise	
 			Add something to db
 			check that it was added
 	code gen 
