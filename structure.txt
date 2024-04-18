@@ -43,7 +43,8 @@ Playwright tutorial
 		Exercise (e05) 	
 			Dropdown
 			Write a test plan & tests
-			Use codegen & manual. 
+			Use codegen & manual.
+			 
 	Different Browsers
 		Example: run with another
 	Browser interaction	
@@ -72,14 +73,14 @@ Playwright tutorial
 		Screenshots
 			Exercise
 				Create a screenshot
-	API tests
+	API tests (a11, d07)
 		Example
-			clear db before...
-->		Exercise	
+			Counter starts at 0, can reset through API
+->		Exercise	(e10)
 			Add something to db
 			check that it was added
 	code gen 
-		Exercise
+		Exercise (e11)
 				https://demo.guru99.com/test/newtours/index.php
 				Calculate and add assert sum less than...
 				Bonus: Improve test

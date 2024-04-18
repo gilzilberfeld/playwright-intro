@@ -12,7 +12,7 @@ Demos
     v d04 - Browser Navigation (a03)
     v d05 - Browser context
     v d06 - Frames
-    v d07 - API 
+    v d07 - API (a10) 
   ->  d08 - Getting rid of Error Dialogs, blocking element, increasing timeout
     d09 - POMs
              Transform string  (Example Navigation)
@@ -60,8 +60,8 @@ Solutions
     v e09 - for a10
             write three test that create a screenshot including each frame content
             clean up the files afterwards
-	e11 - Add something to db, check that it was added			
-->  e10 - Calculate and add assert sum less than... Bonus: Improve test
+->	e10 - Add something to db, check that it was added			
+  v e11 - Code gen
 	e12 - <define test from webinar>
     e13 - Login page (Test plan + tests), Cont...
 	
