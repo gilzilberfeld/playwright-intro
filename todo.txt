@@ -28,8 +28,8 @@ exercises
 --  e07-  Open two pages, one posts info to the second, second posts info, refresh the first one, shows the result   
     v e08 - Make sure that in the frame appears the right image and not the other images
     v e09 - write three test that create a screenshot including each frame content. clean up the files afterwards
-->    e10 - API
-    e11 - for <https://demo.guru99.com/test/newtours/index.php>
+    v e10 - API
+    v e11 - for <https://demo.guru99.com/test/newtours/index.php>
     e12 - POM (From webinar)
     e13 - Summary (https://www.saucedemo.com/ )
 
@@ -60,8 +60,8 @@ Solutions
     v e09 - for a10
             write three test that create a screenshot including each frame content
             clean up the files afterwards
-->	e10 - Add something to db, check that it was added			
-  v e11 - Code gen
-	e12 - <define test from webinar>
+	v e10 - Write a test that proves the operation succeeded
+    v e11 - Code gen
+->	e12 - <define test from webinar>
     e13 - Login page (Test plan + tests), Cont...
 	

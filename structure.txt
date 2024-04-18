@@ -76,9 +76,8 @@ Playwright tutorial
 	API tests (a11, d07)
 		Example
 			Counter starts at 0, can reset through API
-->		Exercise	(e10)
-			Add something to db
-			check that it was added
+		Exercise	(e10)
+			Write a test that proves the operation succeeded
 	code gen 
 		Exercise (e11)
 				https://demo.guru99.com/test/newtours/index.php

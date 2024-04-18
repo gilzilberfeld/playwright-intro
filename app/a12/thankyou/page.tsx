@@ -23,7 +23,7 @@ export default function App12ThankYou() {
           </div>
         </div>
       </Box>
-      <p className="m-3">In this app, you can store a name. When submitting, you'll see a thank you page.</p>
+      <p className="m-3">In this app, you can store a name. When submitting, it calls an API to store the name, and you'll see a thank you page.</p>
     </main>
   );
 }
