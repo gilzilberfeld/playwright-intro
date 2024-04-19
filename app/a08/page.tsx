@@ -2,7 +2,6 @@
 import { Box, Button, TextField } from "@mui/material";
 import axios from "axios";
 import { ChangeEvent, useState } from "react";
-import Log from "./log";
 
 const client = axios.create({
   baseURL: "http://localhost:3000/a08",
@@ -10,29 +9,41 @@ const client = axios.create({
 
 export default function App8() {
   const [theInput, setInput] = useState("");
+  const [theLog, setLog] = useState("");
 
-  async function handleSend(event: React.MouseEvent<HTMLButtonElement, MouseEvent>): Promise<void> {
+  async function handleSend(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
     try {
       const data = { entry: theInput };
-      await client.post("/add", data);
+      await client.post("/storage", data);
+      setInput("");
     } catch (error) {
       alert(error);
     }
   }
-  
-  function handleInput(event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void {
+
+  function handleInput(event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
     setInput(event.target.value);
   }
 
-
-  function handleReset(event: React.MouseEvent<HTMLButtonElement, MouseEvent>): void {
-    throw new Error("Function not implemented.");
+  async function handleReset(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+    try {
+      const data = { entry: "reset" };
+      await client.post("/storage", data);
+      setLog('')
+    } catch (error) {
+      alert(error);
+    }
   }
 
-  function handleRefresh(event: React.MouseEvent<HTMLButtonElement, MouseEvent>): void {
-    throw new Error("Function not implemented.");
+  async function handleRefresh(event: React.MouseEvent<HTMLButtonElement, MouseEvent>): Promise<void> {
+    try {
+      const theAPI = await fetch("http://localhost:3000/a08/storage");
+      const theResponse = await theAPI.json();
+      setLog(theResponse.theWholeLog)
+    } catch (error) {
+      alert(error);
+    }
   }
-
 
   return (
     <main className="flex min-h-screen flex-col items-center p-10">
@@ -40,7 +51,17 @@ export default function App8() {
       <Box component="section" className="bg-purple-200" sx={{ p: 2, border: "2px black" }}>
         <div className="flex flex-col">
           <div className="justify-center m-2 p-2">
-          <Log />
+            <TextField
+              className="w-full"
+              id="result"
+              label="Log"
+              multiline
+              value={theLog}
+              variant="outlined"
+              InputProps={{
+                readOnly: true,
+              }}
+            ></TextField>
           </div>
           <div className="flex flex-row justify-between m-2 p-2">
             <Button className="w-1/3" variant="contained" onClick={handleSend}>
