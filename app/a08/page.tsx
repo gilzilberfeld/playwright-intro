@@ -9,7 +9,7 @@ const client = axios.create({
 
 export default function App8() {
   const [theInput, setInput] = useState("");
-  const [theLog, setLog] = useState("");
+  const [theLog, setLog] = useState("Log");
 
   async function handleSend(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
     try {
@@ -29,17 +29,17 @@ export default function App8() {
     try {
       const data = { entry: "reset" };
       await client.post("/storage", data);
-      setLog('')
+      setLog("");
     } catch (error) {
       alert(error);
     }
   }
 
-  async function handleRefresh(event: React.MouseEvent<HTMLButtonElement, MouseEvent>): Promise<void> {
+  async function handleRefresh(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
     try {
       const theAPI = await fetch("http://localhost:3000/a08/storage");
       const theResponse = await theAPI.json();
-      setLog(theResponse.theWholeLog)
+      setLog(theResponse.theWholeLog);
     } catch (error) {
       alert(error);
     }
@@ -51,17 +51,9 @@ export default function App8() {
       <Box component="section" className="bg-purple-200" sx={{ p: 2, border: "2px black" }}>
         <div className="flex flex-col">
           <div className="justify-center m-2 p-2">
-            <TextField
-              className="w-full"
-              id="result"
-              label="Log"
-              multiline
-              value={theLog}
-              variant="outlined"
-              InputProps={{
-                readOnly: true,
-              }}
-            ></TextField>
+            <Box sx={{ border: "2px black" }}>
+              <textarea value={theLog} name="log" readOnly rows="5" title="log" className="w-full text-black"/>
+            </Box>
           </div>
           <div className="flex flex-row justify-between m-2 p-2">
             <Button className="w-1/3" variant="contained" onClick={handleSend}>

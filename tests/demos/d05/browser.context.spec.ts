@@ -1,6 +1,6 @@
 import test, { expect } from "@playwright/test";
 
-test('opening same in same browser window', async ({ context }) => {
+test('opening same page in same browser window', async ({ context }) => {
     const firstPage = await context.newPage()
     await firstPage.goto("/a01")
     
