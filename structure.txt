@@ -55,8 +55,8 @@ Playwright tutorial
 		Browser context
 		Example	
 			different browsers / same browser
-		Exercise (Chat)
---			Open two pages, one posts info to the second, second posts info, refresh the first one, shows the result
+		Exercise (a08)
+			Open two pages, one posts info to the second, second posts info, refresh the first one, shows the result
 		Frames
 			Example
 				Page containing frame, get the frame and find the control
@@ -98,7 +98,7 @@ Playwright tutorial
 				From webinar
 
 
-	Summary exercises
+->	Summary exercises
 		https://www.saucedemo.com/
 			Login page	
 				Test plan + tests

@@ -1,11 +1,6 @@
 "use client";
 import { Box, Button, TextField } from "@mui/material";
-import axios from "axios";
 import { ChangeEvent, useState } from "react";
-
-const client = axios.create({
-  baseURL: "http://localhost:3000/a08",
-});
 
 export default function App8() {
   const [theInput, setInput] = useState("");
@@ -13,8 +8,8 @@ export default function App8() {
 
   async function handleSend(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
     try {
-      const data = { entry: theInput };
-      await client.post("/storage", data);
+      const data = JSON.stringify({ entry: theInput });
+      await fetch("http://localhost:3000/a08/storage", { method: "POST", body: data });
       setInput("");
     } catch (error) {
       alert(error);
@@ -27,8 +22,8 @@ export default function App8() {
 
   async function handleReset(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
     try {
-      const data = { entry: "reset" };
-      await client.post("/storage", data);
+      const data = JSON.stringify({ entry: "reset" });
+      await fetch("http://localhost:3000/a08/storage", { method: "POST", body: data });
       setLog("");
     } catch (error) {
       alert(error);
@@ -52,7 +47,7 @@ export default function App8() {
         <div className="flex flex-col">
           <div className="justify-center m-2 p-2">
             <Box sx={{ border: "2px black" }}>
-              <textarea value={theLog} name="log" readOnly rows="5" title="log" className="w-full text-black"/>
+              <textarea value={theLog} name="log" readOnly rows="5" title="log" className="w-full text-black" />
             </Box>
           </div>
           <div className="flex flex-row justify-between m-2 p-2">
