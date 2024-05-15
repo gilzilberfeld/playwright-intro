@@ -48,6 +48,7 @@ export default function Home() {
           </Table>
         </TableContainer>
       </div>
+      <p className="p-2">If you don&apos;t remember where you need to go, return here.</p>
     </main>
   );
 }
