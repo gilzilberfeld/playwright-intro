@@ -18,10 +18,10 @@ test("starting from scratch", async ({ page, request }) => {
   await expect(theLabel).toContainText("0");
   await theButton.click();
   await expect(theLabel).toContainText("1");
-// });
+});
 
-// test.skip("resetting the counter", async ({ request, page }) => {
-  // const
+test.skip("resetting the counter", async ({ request, page }) => {
+  const
    resetAPI = await request.post(`/a11/counter`, {
     data: { newCounter: "5" },
   });

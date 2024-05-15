@@ -6,6 +6,6 @@ test("finding the frame", async ({ page }) => {
   expect(page.mainFrame().childFrames().length).toBe(1);
   const theFrame = page.mainFrame().childFrames()[0];
 
-  const theResultBox = await theFrame.getByRole("textbox", { name: "Result" });
+  const theResultBox = theFrame.getByRole("textbox", { name: "Result" });
   await expect(theResultBox).toHaveValue('Waiting...');
 });
