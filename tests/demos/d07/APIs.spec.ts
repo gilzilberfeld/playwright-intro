@@ -2,7 +2,7 @@ import test, { Locator, expect } from "@playwright/test";
 
 let theButton: Locator;
 let theLabel: Locator;
-test.beforeEach(async ({ page, request }) => {
+test.beforeEach(async ({ page }) => {
   theButton = page.getByRole("button", { name: "Increment" });
   theLabel = page.getByText("Counter: ");
 });

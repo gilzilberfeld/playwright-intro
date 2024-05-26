@@ -22,7 +22,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 
-test("correct error is displayed when both fields are empty", async ({ page }) => {
+test("correct error is displayed when both fields are empty", async () => {
   await button.click();
   await expect(bothErrorText).toBeVisible();
   await expect(firstNameErrorText).toBeHidden();
@@ -30,7 +30,7 @@ test("correct error is displayed when both fields are empty", async ({ page }) =
 
 });
 
-test("correct error is displayed when only first name is empty", async ({ page }) => {
+test("correct error is displayed when only first name is empty", async () => {
   await lastNameBox.fill('a')
   await button.click();
   await expect(firstNameErrorText).toBeVisible();
@@ -38,7 +38,7 @@ test("correct error is displayed when only first name is empty", async ({ page }
   await expect(lastNameErrorText).toBeHidden();
 });
 
-test("correct error is displayed when only last name is empty", async ({ page }) => {
+test("correct error is displayed when only last name is empty", async () => {
   await firstNameBox.fill('a')
   await button.click();
   await expect(lastNameErrorText).toBeVisible();
@@ -46,7 +46,7 @@ test("correct error is displayed when only last name is empty", async ({ page })
   await expect(firstNameErrorText).toBeHidden();
 });
 
-test ("no error is shown if both fields are filled" , async ({page})=>{
+test ("no error is shown if both fields are filled" , async ()=>{
   await firstNameBox.fill('a')
   await lastNameBox.fill('a')
   await button.click();
@@ -55,28 +55,28 @@ test ("no error is shown if both fields are filled" , async ({page})=>{
   await expect(bothErrorText).toBeHidden();
 })
 
-test("typing anything clears both-empty-error", async ({ page }) => {
+test("typing anything clears both-empty-error", async () => {
   await button.click();
   await firstNameBox.fill('a')
   await expect(bothErrorText).toBeHidden();
 });
 
 
-test("typing anything clears first-empty-error", async ({ page }) => {
+test("typing anything clears first-empty-error", async () => {
   await lastNameBox.fill('a')
   await button.click();
   await firstNameBox.fill('a')
   await expect(lastNameErrorText).toBeHidden();
 });
 
-test("typing anything clears last-empty-error", async ({ page }) => {
+test("typing anything clears last-empty-error", async () => {
   await firstNameBox.fill('a')
   await button.click();
   await lastNameBox.fill('a')
   await expect(firstNameErrorText).toBeHidden();
 });
 
-test("typing anything on non-empty field clears empty-error", async ({ page }) => {
+test("typing anything on non-empty field clears empty-error", async () => {
   await firstNameBox.fill('a')
   await button.click();
   await firstNameBox.fill('b')

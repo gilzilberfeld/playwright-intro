@@ -12,24 +12,24 @@ test.beforeEach(async ({page}) => {
   
 })
 
-test("another input", async ({ page }) => {
+test("another input", async () => {
   await inputBox.fill("def");
   await button.click();
   await expect(resultBox).toHaveValue("fed");
 });
 
-test("button is disabled in the beginning", async ({ page }) => {
+test("button is disabled in the beginning", async ({ }) => {
   await expect(button).toBeDisabled();
 });
 
-test("button is enabled after filling the input", async ({ page }) => {
+test("button is enabled after filling the input", async () => {
   await inputBox.fill("def");
   await expect(button).toBeEnabled();
 });
 
-test("button is disabled after clearing the input", async ({ page }) => {
+test("button is disabled after clearing the input", async () => {
 	await inputBox.fill("def");
 	await inputBox.clear()
 	await expect(button).toBeDisabled();
-  });
+});
   
