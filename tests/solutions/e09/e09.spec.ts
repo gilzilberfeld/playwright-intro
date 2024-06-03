@@ -6,14 +6,14 @@ import { unlink } from "node:fs";
 // clean up the files afterwards
 
 let googleButton: Locator;
-let bingButton: Locator;
+let testingilButton: Locator;
 let wikiButton: Locator;
 let theFrame: Frame;
 
 test.beforeEach(async ({ page }) => {
   await page.goto("/a10");
   googleButton = page.getByRole("button", { name: "Google" });
-  bingButton = page.getByRole("button", { name: "Bing" });
+  testingilButton = page.getByRole("button", { name: "TestinGil" });
   wikiButton = page.getByRole("button", { name: "Wikipedia" });
   theFrame = page.mainFrame().childFrames()[0];
 });
@@ -24,10 +24,10 @@ test("Grab screenshots of Google frame", async ({ page }) => {
   await page.screenshot({ path: "Google.jpg" });
 });
 
-test("Grab screenshots of Bing frame", async ({ page }) => {
-  await bingButton.click();
-  await theFrame.waitForURL(new RegExp("bing"));
-  await page.screenshot({ path: "Bing.jpg" });
+test("Grab screenshots of TestinGil frame", async ({ page }) => {
+  await testingilButton.click();
+  await theFrame.waitForURL(new RegExp("everydayunittesting"));
+  await page.screenshot({ path: "TestinGil.jpg" });
 });
 
 test("Grab screenshots of Wikipedia frame", async ({ page }) => {
@@ -38,6 +38,6 @@ test("Grab screenshots of Wikipedia frame", async ({ page }) => {
 
 test.afterEach(() => {
   unlink("Wikipedia.jpg", () => {});
-  unlink("Bing.jpg", () => {});
+  unlink("TestinGil.jpg", () => {});
   unlink("Google.jpg", () => {});
 });
