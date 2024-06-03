@@ -10,8 +10,8 @@ export default function App10() {
     setSrc("https://www.google.com/search?igu=1")
   }
   
-  function handleBing(event: React.MouseEvent<HTMLButtonElement, MouseEvent>): void {
-    setSrc("https://bing.com")
+  function handleTestingil(event: React.MouseEvent<HTMLButtonElement, MouseEvent>): void {
+    setSrc("https://www.everydayunittesting.com/")
   }
   
   function handleWikipedia(event: React.MouseEvent<HTMLButtonElement, MouseEvent>): void {
@@ -25,7 +25,7 @@ export default function App10() {
       <Box component="section" className="bg-purple-200 w-1/2" sx={{ p: 2, border: "2px white" }}>
         <div className="flex flex-row justify-between px-2">
           <Button className="px-2" variant="contained" onClick={handleGoogle}>Google</Button>
-          <Button className="px-2" variant="contained"onClick={handleBing}> Bing</Button>
+          <Button className="px-2" variant="contained"onClick={handleTestingil}>TestinGil</Button>
           <Button className="px-2"variant="contained" onClick={handleWikipedia}>Wikipedia</Button>
         </div>
       </Box>
