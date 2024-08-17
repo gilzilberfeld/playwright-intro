@@ -47,7 +47,7 @@ export default function App8() {
         <div className="flex flex-col">
           <div className="justify-center m-2 p-2">
             <Box sx={{ border: "2px black" }}>
-              <textarea value={theLog} name="log" readOnly rows="5" title="log" className="w-full text-black" />
+              <textarea value={theLog} name="log" readOnly rows={5} title="log" className="w-full text-black" />
             </Box>
           </div>
           <div className="flex flex-row justify-between m-2 p-2">

@@ -5,6 +5,7 @@ test('browser navigation', async ({ page }) => {
   
     const inputBox = page.getByRole("textbox", { name : "Input"})
     const button =  page.getByRole("button", {name : 'Go to Reverse Page'})
+    const message = page.getByText('The reverse of')
     
     await inputBox.fill('navigate')
     await button.click()
@@ -18,7 +19,7 @@ test('browser navigation', async ({ page }) => {
 
     await page.goForward()
 
-    const message = page.getByText('The reverse of')
+   
     await expect(message).toContainText('etagivan')
 
     

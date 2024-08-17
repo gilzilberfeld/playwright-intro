@@ -5,13 +5,16 @@ import { ReactNode, useState } from "react";
 
 let message: string;
 export default function App6() {
-  const [selectedItem, setSelectItem] = useState("1");
+  type SelectValue = '' | '1' | undefined;
+  
+  const [selectedItem, setSelectItem] = useState<SelectValue>('1');
   const [isDisabled, setDisabled] = useState(true);
   const [theInput, setTheInput] = useState('')
   const [theResult, setTheResult] = useState('1')
 
+
   function handleSelect(event: SelectChangeEvent<"1">, child: ReactNode): void {
-    setSelectItem(event.target.value);
+    setSelectItem(event.target.value as SelectValue);
     setTheResult(event.target.value)
   }
 
@@ -32,7 +35,7 @@ export default function App6() {
       setTheResult ('Not Found')  
       return
     }
-    setSelectItem(theInput)
+    setSelectItem(theInput as SelectValue)
     setTheResult(theInput)
   }
 
@@ -42,7 +45,8 @@ export default function App6() {
       <Box component="section" className="bg-purple-200" sx={{ p: 2, border: "2px black" }}>
         <div className="flex flex-col">
           <div className="flex flex-row justify-center m-4">
-            <Select className="w-1/2" value={selectedItem} label="Item List" onChange={handleSelect}>
+            <Select className="w-1/2" value={selectedItem} label="Item List" 
+                onChange={handleSelect}>
               <MenuItem value={1}>Item 1</MenuItem>
               <MenuItem value={2}>Item 2</MenuItem>
               <MenuItem value={3}>Item 3</MenuItem>

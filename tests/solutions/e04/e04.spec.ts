@@ -26,7 +26,7 @@ test("on startup both checkboxes are unchecked and clear is disabled", async ({ 
   await expect(clearBothButton).toBeDisabled();
 });
 
-test("selecting both when both unchecked checks both and disables select all button", async () => {
+test("selecting both when both unchecked, checks both and disables select all button", async () => {
   await selectBothButton.click();
 
   await expect(checkbox1).toBeChecked();

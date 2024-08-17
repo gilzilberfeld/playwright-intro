@@ -9,7 +9,7 @@ export default function App12() {
   const [name,setName] = useState('')
 
 
-  async function handleAdd(event: React.MouseEvent<HTMLButtonElement, MouseEvent>): void {
+  async function handleAdd(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
     await fetch("/a12/storage",  {
       method: "POST", 
       body: JSON.stringify({ newName : name})
@@ -36,7 +36,7 @@ export default function App12() {
           <div className="flex justify-center items-center"></div>
         </div>
       </Box>
-      <p className="m-3">In this app, you can store a name. When submitting, it calls an API to store the name, and you'll see a thank you page.</p>
+      <p className="m-3">In this app, you can store a name. When submitting, it calls an API to store the name, and you will see a thank you page.</p>
     </main>
   );
 }
