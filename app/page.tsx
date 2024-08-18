@@ -1,4 +1,4 @@
-import { Link, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
+
 function createData(name: string, app1: string, link1: string, app2: string, link2: string) {
   return { name, app1, link1, app2, link2 };
 }
@@ -16,39 +16,66 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center p-5">
       <h1 className="p-2">The Apps Menu</h1>
-      <div className="w-1/2 ">
-        <TableContainer component={Paper}>
-          <Table aria-label="simple table">
-            <TableHead>
-              <TableRow className="bg-teal-200">
-                <TableCell align="center">App name</TableCell>
-                <TableCell align="center">Link</TableCell>
-                <TableCell align="center">App name</TableCell>
-                <TableCell align="center">Link</TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {rows.map((row) => (
-                <TableRow key={row.name} sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
-                  <TableCell align="left" className="bg-purple-100 w-1/4">
-                    {row.app1}
-                  </TableCell>
-                  <TableCell align="center" className="bg-purple-100">
-                    <Link href={row.link1}>{row.link1}</Link>
-                  </TableCell>
-                  <TableCell align="left" className="bg-purple-200 w-1/4">
-                    {row.app2}
-                  </TableCell>
-                  <TableCell align="center" className="bg-purple-200">
-                    <Link href={row.link2}>{row.link2}</Link>
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
+      <div className="w-1/2">
+        <table>
+          <thead>
+            <tr className="bg-teal-200">
+              <th align="center">App name</th>
+              <th align="center">Link</th>
+              <th align="center">App name</th>
+              <th align="center">Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((row) => (
+              <tr key={row.name}>
+                <td align="left" className="text-black bg-purple-100 w-1/4">
+                  {row.app1}
+                </td>
+                <td align="center" className="text-blue-400 underline bg-purple-100">
+                  <a href={row.link1}>{row.link1}</a>
+                </td>
+                <td align="left" className="text-black bg-purple-200 w-1/4">
+                  {row.app2}
+                </td>
+                <td align="center" className="text-blue-400 underline bg-purple-200">
+                  <a href={row.link2}>{row.link2}</a>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
       <p className="p-2">If you don&apos;t remember where you need to go, return here.</p>
     </main>
   );
 }
+
+/*
+<div className="w-1/2">
+  <table>
+    <thead>
+      <tr className="bg-teal-200">
+        <th align="center">App name</th>
+        <th align="center">Link</th>
+        <th align="center">App name</th>
+        <th align="center">Link</th>
+      </tr>
+    </thead>
+    <tbody>
+      {rows.map((row) => (
+        <tr key={row.name}>
+          <td align="left" className="bg-purple-100 w-1/4">{row.app1}</td>
+          <td align="center" className="bg-purple-100">
+            <a href={row.link1}>{row.link1}</a>
+          </td>
+          <td align="left" className="bg-purple-200 w-1/4">{row.app2}</td>
+          <td align="center" className="bg-purple-200">
+            <a href={row.link2}>{row.link2}</a>
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+*/
