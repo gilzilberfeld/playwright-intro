@@ -15,7 +15,7 @@ export default function App10() {
   }
   
   function handleWikipedia(event: React.MouseEvent<HTMLButtonElement, MouseEvent>): void {
-    setSrc("http://wikipedia.com/")
+    setSrc("https://wikipedia.com/")
   }
 
   return (
