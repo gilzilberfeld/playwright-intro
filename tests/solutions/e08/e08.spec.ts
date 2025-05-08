@@ -17,9 +17,9 @@ test.beforeEach(async ({page})=> {
   testingilButton = page.getByRole("button", { name: "TestinGil" });
   wikiButton = page.getByRole("button", { name: "Wikipedia" });
   theFrame = page.mainFrame().childFrames()[0]
-  googleImage = theFrame.getByRole('img', {name : 'google'})
-  testingilImage = theFrame.getByAltText("TestinGil")
-  wikiImage = theFrame.locator('.central-featured-logo')
+  googleImage = theFrame.locator('.lnXdpd')
+  testingilImage = theFrame.getByRole('link', { name: 'TestinGil'});
+  wikiImage = theFrame.locator('.central-featured-logo');
 })
 
 test('Google has Google image and no TestinGil / Wiki image', async ()=> {
