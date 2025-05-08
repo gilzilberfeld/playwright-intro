@@ -9,7 +9,7 @@ export default function App8() {
   async function handleSend(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
     try {
       const data = JSON.stringify({ entry: theInput });
-      await fetch("http://localhost:3000/a08/storage", { method: "POST", body: data });
+      await fetch("/a08/storage", { method: "POST", body: data });
       setInput("");
     } catch (error) {
       alert(error);
@@ -23,7 +23,7 @@ export default function App8() {
   async function handleReset(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
     try {
       const data = JSON.stringify({ entry: "reset" });
-      await fetch("http://localhost:3000/a08/storage", { method: "POST", body: data });
+      await fetch("/a08/storage", { method: "POST", body: data });
       setLog("");
     } catch (error) {
       alert(error);
@@ -32,7 +32,7 @@ export default function App8() {
 
   async function handleRefresh(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
     try {
-      const theAPI = await fetch("http://localhost:3000/a08/storage");
+      const theAPI = await fetch("/a08/storage");
       const theResponse = await theAPI.json();
       setLog(theResponse.theWholeLog);
     } catch (error) {

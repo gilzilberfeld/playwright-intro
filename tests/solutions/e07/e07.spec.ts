@@ -3,7 +3,6 @@ import test, { Locator, Page, expect } from "@playwright/test";
 // for a08
 // Open the app on two pages in a browser 
 // Write a test plan and implement for the chat functionality
-// Use complete path: http://localhost:3000/a08 instead of just /a08
 let page1: Page;
 let theLog1: Locator;
 let sendButton1: Locator;
@@ -21,8 +20,8 @@ let theInput2: Locator;
 test.beforeEach(async ({ context }) => {
   page1 = await context.newPage();
   page2 = await context.newPage();
-  await page1.goto("http://localhost:3000/a08");
-  await page2.goto("http://localhost:3000/a08");
+  await page1.goto("/a08");
+  await page2.goto("/a08");
   
   theLog1 = page1.getByRole("textbox", { name: "log" });
   theInput1 = page1.getByRole("textbox", { name: "Input" });
