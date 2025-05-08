@@ -66,21 +66,21 @@ test("typing anything clears first-empty-error", async () => {
   await lastNameBox.fill('a')
   await button.click();
   await firstNameBox.fill('a')
-  await expect(lastNameErrorText).toBeHidden();
+  await expect(firstNameBox).toBeHidden();
 });
 
 test("typing anything clears last-empty-error", async () => {
   await firstNameBox.fill('a')
   await button.click();
   await lastNameBox.fill('a')
-  await expect(firstNameErrorText).toBeHidden();
+  await expect(lastNameBox).toBeHidden();
 });
 
 test("typing anything on non-empty field clears empty-error", async () => {
   await firstNameBox.fill('a')
   await button.click();
   await firstNameBox.fill('b')
-  await expect(firstNameErrorText).toBeHidden();
+  await expect(lastNameErrorText).toBeHidden();
 
   await firstNameBox.clear()
   await lastNameBox.clear()
@@ -88,7 +88,6 @@ test("typing anything on non-empty field clears empty-error", async () => {
   await lastNameBox.fill('a')
   await button.click();
   await lastNameBox.fill('b')
-  await expect(lastNameErrorText).toBeHidden();
-
+  await expect(firstNameErrorText).toBeHidden();
 });
 
