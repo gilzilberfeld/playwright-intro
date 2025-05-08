@@ -37,7 +37,7 @@ test.beforeEach(async ({ context }) => {
   
  });
 
-test("startup", async ({ page }) => {
+test("startup", async () => {
   
   await expect(sendButton1).toBeEnabled();
   await expect(resetButton1).toBeEnabled();
